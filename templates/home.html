@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Olá, {{current_user.nome}}!</h1> <!-- current_user é a classe importada de flask login -->
+    {% if current_user.is_authenticated %}
+        <h1> Você está logado. {{ current_user.nome }}! </h1>
+    {% else %}
+        <h1>Você não está logado</h1>
+    {% endif %}
+</body>
+</html>
